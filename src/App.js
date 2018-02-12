@@ -88,6 +88,7 @@ class StarsRange extends Component {
     render() {
         return (
             <div>
+                <p>{this.state.star}</p>
                 <form>
                     <input type="range" min="1" max="5" step="1" defaultValue="1"
                            onChange={this.onChangeStars.bind(this)}/>
@@ -109,6 +110,7 @@ function Stars(props) {
     }
     return (
         <div>
+
             {num.map((number) =>
                 <img src={stars[number]===1?greenStar:grayStar} key={number+1} alt={number+1}/>
 
@@ -122,6 +124,7 @@ class App extends Component {
         return (
             <div className="App">
                 <CheckTrue/>
+                <br/>
                 <StarsRange/>
             </div>
         );
